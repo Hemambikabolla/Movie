@@ -1,0 +1,130 @@
+The input data for date in sample JSON will change accordingly
+-------------------------------------------------------
+Valid Data for register participant 
+-------------------------------------------------------
+POST URL: http://localhost:1111/event-api/events
+Request Body: 
+    {
+        "name": "Jillo",
+        "emailId": "jillo23@infy.com",
+        "gender": "Female",
+        "registrationDate": "2020-09-21",
+        "eventDTO": {
+            "name": "Ethical Hacking"
+        }
+    }
+--------------------------------------------------------
+Invalid Data for register participant (Bean Validation)
+--------------------------------------------------------
+POST URL: http://localhost:1111/event-api/events
+Request Body:
+    {
+        "name": null,
+        "emailId": null,
+        "gender": null,
+        "registrationDate": null
+    }
+    
+--------------------------------------------------------
+Invalid Data for register participant (Bean Validation)
+--------------------------------------------------------
+POST URL: http://localhost:1111/event-api/events
+Request Body:
+   {
+        "name": "millo",
+        "emailId": "millo23@infy.com",
+        "gender": "Female",
+        "registrationDate": "2020-09-21",
+        "eventDTO": {
+            "name": "Ethical Hacking"
+        }
+    }
+    
+--------------------------------------------------------
+Invalid Data for register participant (Bean Validation)
+--------------------------------------------------------
+POST URL: http://localhost:1111/event-api/events
+Request Body: 
+    {
+        "name": "Millo",
+        "emailId": "millo23@inf",
+        "gender": "Female",
+        "registrationDate": "2020-09-21",
+        "eventDTO": {
+            "name": "Ethical Hacking"
+        }
+    }   
+--------------------------------------------------------
+Invalid Data for register participant (Bean Validation)
+--------------------------------------------------------
+POST URL: http://localhost:1111/event-api/events
+Request Body:
+    {
+        "name": "Millo",
+        "emailId": "millo23@infy.com",
+        "gender": "female",
+        "registrationDate": "2020-09-21",
+        "eventDTO": {
+            "name": "Ethical Hacking"
+        }
+    }
+
+--------------------------------------------------------
+Invalid Data for register participant (Service Exception)
+--------------------------------------------------------   
+POST URL: http://localhost:1111/event-api/events
+Request Body:
+    {
+        "name": "Millo",
+        "emailId": "millo23@infy.com",
+        "gender": "Female",
+        "registrationDate": "2020-09-21",
+        "eventDTO": {
+            "name": "Mono Acting"
+        }
+    }   
+--------------------------------------------------------
+Invalid Data for register participant (Service Exception)
+--------------------------------------------------------   
+POST URL: http://localhost:1111/event-api/events
+Request Body:
+    {
+        "name": "Millo",
+        "emailId": "millo23@infy.com",
+        "gender": "Female",
+        "registrationDate": "2020-09-21",
+        "eventDTO": {
+            "name": "Public Speaking"
+        }
+    }
+--------------------------------------------------------
+Invalid Data for register participant (Service Exception)
+--------------------------------------------------------     
+POST URL: http://localhost:1111/event-api/events
+Request Body:
+        {
+        "name": "Millo",
+        "emailId": "millo23@infy.com",
+        "gender": "Female",
+        "registrationDate": "2020-09-21",
+        "eventDTO": {
+            "name": "Photography contest"
+        }
+    }  
+    
+------------------------------------------------------
+Valid Data for get participants by Event Venue
+------------------------------------------------------
+GET URL: http://localhost:1111/event-api/events/A6-Hall 
+
+
+------------------------------------------------------
+Invalid Data for get participants by Event Venue
+------------------------------------------------------
+GET URL: http://localhost:1111/event-api/events/Hall 
+ 
+ 
+------------------------------------------------------
+Invalid Data for get participants by Event Venue
+------------------------------------------------------
+GET URL: http://localhost:1111/event-api/events/Z7-Hall
